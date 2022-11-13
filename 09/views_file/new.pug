@@ -1,0 +1,23 @@
+doctype html
+html 
+    head 
+        meta(charest='utf-8')
+    body 
+        h1 
+            a(href='/topic') Server Side JavaScript
+        ul
+            each topic in topics
+                li
+                    a(href='/topic/'+topic)=topic 
+        article     
+            form(action='/topic' method='post') 
+                p
+                    input(type='text' name='title' placeholder='title')
+                p 
+                    textarea(name='description')
+                p 
+                    input(type='submit')
+//- form에 input으로 제목,본문 전송할수 있는 컨트롤 넣어줌
+//- form에 action 속성 사용해서 topic이라는 경로로 사용자가 입력한 데이터 저장할 것
+//- method는 post방식으로 전송
+//- post방식 사용위해서는 app.post를 해줘야함

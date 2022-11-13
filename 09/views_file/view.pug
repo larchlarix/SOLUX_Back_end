@@ -1,0 +1,28 @@
+doctype html
+html 
+    head 
+        meta(charest='utf-8')
+    body 
+       h1 
+        a(href='/topic') Server Side JavaScript
+       ul
+        each topic in topics
+            li
+                a(href='/topic/'+topic)=topic 
+        article     
+            h2=title
+            =description
+        div 
+            a(href='/topic/new') new
+        //-each 활용해 반복문
+
+        //-li 
+            a(href='/topic/nodejs') nodejs
+        //-li 
+            a(href='/topic/javascript') nodejs
+            이 li코드를 반복문으로 처리
+        
+
+//- h1에 제목
+//-글목록 ul,li사용
+//-li밑에 링크들어옴
